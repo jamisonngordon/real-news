@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/jamisonngordon/real-news/issues"
   },
-  "homepage": "https://github.com/jamisonngordon/real-news#readme"
+  "homepage": "https://github.com/jamisonngordon/real-news#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.4.19"
+  }
 }
