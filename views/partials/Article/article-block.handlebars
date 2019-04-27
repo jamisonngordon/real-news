@@ -2,7 +2,10 @@
     <div class="card-body">
         <a href="{{link}}">{{title}}</a>
         <p>{{summary}}</p>
-        <input id="comment-body">
-        <button id="comment"></button>
+        <input id="input-{{_id}}" class="col-8">
+        <button id="comment" data-id="{{_id}}">Comment</button>
+        {{#each comments}}
+            {{> Article/comment-block}}
+        {{/each}}
     </div>
 </div>

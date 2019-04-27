@@ -20,21 +20,19 @@ module.exports = {
                  result.link = $(this).children(".item-info-wrap").children(".item-info").children(".title")
                      .children("a").attr("href");
 
-                console.log('title: ', result.title);
-                console.log('link: ', result.link);
-                console.log('summary: ', result.summary);
+                if(result.title && result.summary && result.link) {
+                    db.findOne({'title': result.title}, function(findError, doc){
+                        if(!doc) {
+                            db.create(result)
+                                .then(function(dbArticle) {
 
-                db.findOne({'title': result.title}, function(findError, doc){
-                    if(!doc) {
-                        db.create(result)
-                            .then(function(dbArticle) {
-                                console.log(dbArticle);
-                            })
-                            .catch(function(err) {
-                                console.log(err);
-                            });
-                    }
-                });
+                                })
+                                .catch(function(err) {
+                                    console.log(err);
+                                });
+                        }
+                    });
+                }
             });
         });
     },
