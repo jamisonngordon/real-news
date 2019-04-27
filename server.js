@@ -4,7 +4,7 @@ let axios = require("axios");
 let helpers = require('./helpers.js');
 
 let db = require("./models/Article");
-let PORT = 3000;
+var PORT = process.env.PORT || 3000;
 let app = express();
 
 // Parse request body as JSON
