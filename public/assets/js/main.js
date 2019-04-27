@@ -11,7 +11,7 @@ $(function () {
             }
         );
     });
-    $('#delete').click(function () {
+    $('.delete').click(function () {
         let id = $(event.target).data('id');
         let parentID = $(event.target).parent().parent().parent().children('#comment').data('id');
         $.ajax("/api/comment/" + parentID + '/' + id , {
